@@ -1,37 +1,87 @@
+let number1 = "";
+let number2 = "";
+let toOperate = "";
+let displayValue = "";
+
+const display = document.querySelector(".display h2");
+const inputNumbers = document.querySelectorAll(".number");
+const operators = document.querySelectorAll(".operator");
+const submit = document.querySelector(".submit");
+
+
+function clear(){
+  number1 = "";
+  number2 = "";
+  toOperate = "";
+  displayValue = "";
+}
+
 function add(a, b) {
-  return  a + b;
+  display.innerText = parseInt(a) + parseInt(b);
+  clear();
 }
 
 
 function subtract(a, b) {
-  return  a - b;
+  display.innerText = a - b;
+  clear();
 }
 
 function multiply(a, b) {
-  return  a * b;
+  display.innerText = a * b;
+  clear();
 }
 
 function divide(a, b) {
-  return  a / b;
+  display.innerText = a / b;
+  clear();
 }
 
+function operate(equation){
+  for(i in equation){
+    if (["+", "-", "/", "*"].includes(equation[i])){
+      number1 = equation.slice(0 , i);
+      number2 = equation.slice(i);
+      toOperate = number2.substring(0, 1);
+      number2 = number2.slice(1);
+      console.log(number1, number2, toOperate);
+    }
+  }
 
-function operate(n1, operator, n2){
-  switch (operator) {
+  switch (toOperate) {
     case "+":
-      add(n1, n2);
+      add(number1, number2);
       break;
-
     case "-":
-      subtract(n1, n2);
+      subtract(number1, number2);
       break;
-
     case "*":
-      multiply(n1, n2);
+      multiply(number1, number2);
       break;
-
     case "/":
-      divide(n1, n2):
-      break;
+      divide(number1, number2);
   }
 }
+
+
+
+
+inputNumbers.forEach((number) => {
+  number.addEventListener("click", () => {
+    displayValue += number.innerText;
+    display.innerText = displayValue;
+  })
+})
+
+operators.forEach((operator) => {
+  operator.addEventListener("click", () => {
+    displayValue += operator.innerText;
+    display.innerText = displayValue;
+
+    console.log(displayValue);
+  })
+})
+
+submit.addEventListener("click", () => {
+  operate(displayValue);
+})
