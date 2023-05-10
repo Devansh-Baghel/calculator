@@ -5,14 +5,14 @@ const submit = document.querySelector(".submit");
 
 let equation = "";
 // let counter = 0;
-// const operatorArray = ["+", "-", "*", "/"];
+const operatorArray = ["+", "-", "*", "/"];
 
 function operate(string) {
   // This method to calculate the answer uses eval() in strict mode
   const answer = eval?.(`"use strict";(${string})`);
   display.innerText = answer;
   console.log(answer);
-  string = answer;
+  equation = answer;
 }
 
 function appendToEquation(){
@@ -26,9 +26,10 @@ inputNumbers.forEach((number) => {
 
 operators.forEach((operator) => {
   operator.addEventListener("click", () => {
-    if(["+", "-", "*", "/"].includes(equation[equation.length-1])){
+    if(operatorArray.includes(equation[equation.length-1])){
       return;
     }
+    operate(equation);
     equation += operator.innerText;
     display.innerText = equation;
   })
