@@ -7,7 +7,7 @@ This is my solution for [TOP's Calculator Project.](https://www.theodinproject.c
 - [x] Make it work somehow with js .? idk...
 - [x] Allow user to repeatedly calculate without having to refresh the page
 - [ ] Make sure user can't enter too many numbers
-- [ ] Make sure user can't enter more than one operator
+- [x] Make sure user can't enter more than one operator
 - [ ] Clean all the old dirty code with newer dirty code
 - [ ] Add decimal support
 - [ ] Add a 'clear' button
