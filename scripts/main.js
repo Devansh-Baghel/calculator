@@ -2,10 +2,16 @@ const display = document.querySelector(".display h2");
 const inputNumbers = document.querySelectorAll(".number");
 const operators = document.querySelectorAll(".operator");
 const submit = document.querySelector(".submit");
+const clearButton = document.querySelector(".clear");
 
 let equation = "";
-// let counter = 0;
+
 const operatorArray = ["+", "-", "*", "/"];
+
+function clear() {
+  equation = "";
+  display.innerText = "0";
+}
 
 function operate(string) {
   // This method to calculate the answer uses eval() in strict mode
@@ -35,6 +41,10 @@ operators.forEach((operator) => {
   })
 })
 
+// Operating the equation when user clicks enter.
 submit.addEventListener("click", () => {
   operate(equation);
 })
+
+// Clearing everything when user clicks clear.
+clearButton.addEventListener("click", clear);
