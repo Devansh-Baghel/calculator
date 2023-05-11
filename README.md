@@ -1,5 +1,5 @@
 # Calculator
-[Live Preview](https://devansh-baghel.github.io/calculator/)
+[Live Demo](https://devansh-baghel.github.io/calculator/)
 
 This is my solution for [TOP's Calculator Project.](https://www.theodinproject.com/lessons/foundations-calculator)
 
@@ -19,4 +19,4 @@ This is my solution for [TOP's Calculator Project.](https://www.theodinproject.c
 - [ ] Add keybord support
 - [ ] Improve Styling
 - [ ] Add a '%' button
-- [ ] Add a backspace support
+- [x] Add a backspace support
