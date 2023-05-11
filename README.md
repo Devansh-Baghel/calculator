@@ -1,4 +1,6 @@
 # Calculator
+[Live Preview](https://devansh-baghel.github.io/calculator/)
+
 This is my solution for [TOP's Calculator Project.](https://www.theodinproject.com/lessons/foundations-calculator)
 
 ## Todo
