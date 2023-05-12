@@ -34,6 +34,17 @@ body{
 
 h2{
     margin-right: 5px;
+    overflow-x: scroll;
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--green);
+    border-radius: 100vw;
 }
 
 .input-buttons{
