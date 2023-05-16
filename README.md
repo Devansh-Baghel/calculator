@@ -21,4 +21,9 @@ This is my solution for [TOP's Calculator Project.](https://www.theodinproject.c
 - [ ] Add decimal support
 - [ ] Add keybord support
 - [ ] Improve Styling
+	- [ ] Add a dark mode
+	- [ ] Improve layout
+	- [ ] Make buttons round
+	- [ ] Better fonts
 - [ ] Add a '%' button
+- [ ] Add a +/- button

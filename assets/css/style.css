@@ -5,6 +5,10 @@
     --darkgreen: rgba(62, 199, 85, 0.986);
     --white: #FFF;
     --lightgrey: rgb(78, 255, 240);
+
+    --light-bg: #F1F2F3;
+    --light-primary-btn: #FFF;
+    --light-secondary-btn: #4B5EFC;
 }
 
 body{

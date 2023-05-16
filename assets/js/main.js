@@ -31,13 +31,12 @@ function operate(string) {
   equation = answer;
 }
 
-function appendToEquation(){
-  equation += this.innerText;
-  display.innerText = equation;
-}
 
 inputNumbers.forEach((number) => {
-  number.addEventListener("click", appendToEquation)
+  number.addEventListener("click", () => {
+    equation += number.innerText;
+    display.innerText = equation;
+  })
 })
 
 operators.forEach((operator) => {
