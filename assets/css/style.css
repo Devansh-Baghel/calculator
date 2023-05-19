@@ -75,3 +75,14 @@ h2{
     background-color: var(--red);
     color: var(--white);
 }
+
+.zero{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.submit{
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 4;
+}
