@@ -17,13 +17,10 @@ This is my solution for [TOP's Calculator Project.](https://www.theodinproject.c
 - [x] Add a backspace support
 - [ ] Make sure user can't hit submit directly after an operator
 - [ ] Make sure user can enter double 00, strict mode in eval prevents this
-- [ ] Just use mathjs api
 - [ ] Add decimal support
 - [ ] Add keybord support
 - [ ] Improve Styling
 	- [ ] Add a dark mode
-	- [ ] Improve layout
+	- [x] Improve layout
 	- [ ] Make buttons round
 	- [ ] Better fonts
-- [ ] Add a '%' button
-- [ ] Add a +/- button
