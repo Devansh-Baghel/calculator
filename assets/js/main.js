@@ -5,7 +5,7 @@ const submit = document.querySelector(".submit");
 const clearButton = document.querySelector(".clear");
 const backspaceButton = document.querySelector(".backspace");
 
-let equation = "0";
+let equation = "";
 
 const operatorArray = ["+", "-", "*", "/"];
 
