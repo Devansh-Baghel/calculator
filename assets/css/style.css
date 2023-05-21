@@ -101,6 +101,7 @@ h2{
     grid-row-start: 4;
     grid-row-end: 6;
     grid-column-start: 4;
+    background-color: var(--secondary-btn) !important;
 }
 
 .number,
@@ -109,7 +110,11 @@ h2{
 }
 
 .backspace{
-    background-color: #FFF;
+    background-color: var(--red) !important;
     /* color: var(--red); */
     /* border-radius: 0px; */
+}
+
+.operator {
+    background-color: var(--grey) !important;
 }
