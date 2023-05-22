@@ -1,15 +1,4 @@
 :root{
-    /* --red: rgb(255, 63, 63); */
-    /* --yellow: rgb(255, 255, 101); */
-    /* --green: rgba(71, 255, 101, 0.986); */
-    /* --darkgreen: rgba(62, 199, 85, 0.986); */
-    /* --white: #FFF; */
-    /* --lightgrey: rgb(78, 255, 240); */
-
-    /* --light-bg: #F1F2F3;
-    --light-primary-btn: #FFF;
-    --light-secondary-btn: #4B5EFC; */
-
     --darkblue: #1A1A2E;
     --primary-btn: #4B72A1;
     --secondary-btn: #0F3460;
@@ -55,7 +44,7 @@ h2{
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--green);
+    background-color: var(--secondary-btn);
     border-radius: 100vw;
 }
 
@@ -68,8 +57,6 @@ h2{
     height: 300px;
     gap: 10px;
     text-align: center;
-    /* row-gap: 20px; */
-    /* column-gap: 20px; */
     margin-top: 20px;
 }
 
@@ -81,20 +68,17 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid var(--darkgreen); */
 }
 
 .input-buttons div:hover{
     cursor: pointer;
     background-color: var(--red);
-    /* color: var(--white); */
 }
 
 .zero{
     grid-column-start: 1;
     grid-column-end: 3;
     border-radius: 40px !important;
-    /* background-color: white; */
     width: 130px !important;
 }
 
@@ -106,6 +90,7 @@ h2{
     height: 130px !important;
     border-radius: 40px !important;
     color: white;
+    font-size: 34px;
 }
 
 .number,
@@ -115,11 +100,16 @@ h2{
 
 .backspace{
     background-color: var(--red) !important;
-    /* color: var(--red); */
-    /* border-radius: 0px; */
 }
 
 .operator,
 .clear {
     background-color: var(--grey) !important;
+    font-size: 34px;
+}
+
+.operator:hover,
+.clear:hover{
+    background-color: var(--red) !important;
+    color: white !important;
 }
