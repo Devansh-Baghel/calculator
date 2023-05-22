@@ -17,11 +17,8 @@ This is my solution for [TOP's Calculator Project.](https://www.theodinproject.c
 - [x] Add a backspace support
 - [x] Make sure user can't hit submit directly after an operator
 - [x] Fix starting bug where equation is just 0
+- [x] Improve Styling
+- [x] Make js work with new styling
 - [ ] Make sure user can enter double 00, strict mode in eval prevents this
 - [ ] Add decimal support
 - [ ] Add keybord support
-- [ ] Improve Styling
-	- [ ] Add a dark mode
-	- [x] Improve layout
-	- [ ] Make buttons round
-	- [ ] Better fonts

@@ -9,50 +9,64 @@ let equation = "";
 
 const operatorArray = ["+", "-", "*", "/"];
 
-// To clear everything when user clicks AC
+// To clear everything when user clicks C
 function clear() {
-  equation = "";
-  display.innerText = "0";
+	equation = "";
+	display.innerText = "0";
 }
 
 // To remove last index from the equation
 function backspace() {
-  equation = display.innerText;
-  equation = equation.slice(0, equation.length - 1);
-  display.innerText = equation;
+	equation = display.innerText;
+	equation = equation.slice(0, equation.length - 1);
+	display.innerText = equation;
 }
 
 // To evaluate the equation
 function operate(string) {
-  // This method to calculate the answer uses eval() in strict mode
-  const answer = eval?.(`"use strict";(${string})`);
-  display.innerText = answer;
-  console.log(answer);
-  equation = answer;
+	// This method to calculate the answer uses eval() in strict mode
+	const answer = eval?.(`"use strict";(${string})`);
+	display.innerText = answer;
+	console.log(answer);
+	equation = answer;
 }
 
 
 inputNumbers.forEach((number) => {
-  number.addEventListener("click", () => {
-    equation += number.innerText;
-    display.innerText = equation;
-  })
+	number.addEventListener("click", () => {
+		equation += number.innerText;
+		display.innerText = equation;
+	})
 })
 
 operators.forEach((operator) => {
-  operator.addEventListener("click", () => {
-    if(operatorArray.includes(equation[equation.length-1])){
-      return;
-    }
-    operate(equation);
-    equation += operator.innerText;
-    display.innerText = equation;
-  })
+	operator.addEventListener("click", () => {
+
+		// Checking if the last index in equation is already an operator
+		if(operatorArray.includes(equation[equation.length-1])){
+			return;
+		}
+
+		// Operating equation before adding a new operator into the equation
+		operate(equation)
+
+		// Checking for * and / cause their innerHTML has &times; and &divide; 
+		if (operator.id == "*"){
+			equation += "*";
+		}
+		else if (operator.id == "/"){
+			equation += "/";
+		}
+		else{
+			equation += operator.innerText;
+		}
+		display.innerText = equation;
+	})
 })
 
 // Operating the equation when user clicks enter.
 submit.addEventListener("click", () => {
-  operate(equation);
+	operate(equation);
 })
 
 // Clearing everything when user clicks clear.
