@@ -17,7 +17,7 @@ body{
 
 .calculator-body{
     height: 520px;
-    width: 280px;
+    width: min(280px, 80%);
     border-radius: 50px;
     border: 20px solid var(--darkblue);
     background-color: var(--darkblue);
